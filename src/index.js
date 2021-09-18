@@ -8,13 +8,16 @@ if (require('electron-squirrel-startup')) {
   app.quit();
 }
 
+let mainWindow;
+
 const createWindow = () => {
   // Create the browser window.
-  const mainWindow = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
       nodeIntegration: true,
+      contextIsolation: false,
     },
   });
 
@@ -51,6 +54,7 @@ app.on('activate', () => {
 
 ipcMain.on('open', (event, args) => {
   console.log('add new button clicked');
+  mainWindow.loadFile(path.join(__dirname, 'add.html'));
 });
 
 // In this file you can include the rest of your app's specific main process

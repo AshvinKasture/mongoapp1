@@ -5,8 +5,138 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-areas:
+          'roll-label roll-inp'
+          'fname-label fname-inp'
+          'mname-label mname-inp'
+          'lname-label lname-inp'
+          'placed-label placed-inp'
+          'company-label company-inp'
+          'package-label package-inp'
+          'companies-applied-label companies-applied-label'
+          'companies-applied-table companies-applied-table';
+
+        /* grid-gap: 1%; */
+        font-size: 1.3rem;
+
+        padding-left: 25%;
+        margin-top: 2%;
+      }
+
+      .blank-left {
+        grid-area: blank-left;
+      }
+      .blank-right {
+        grid-area: blank-right;
+      }
+
+      .fname-label {
+        grid-area: fname-label;
+      }
+      .fname-inp {
+        grid-area: fname-inp;
+      }
+      .mname-label {
+        grid-area: mname-label;
+      }
+      .mname-inp {
+        grid-area: mname-inp;
+      }
+      .lname-label {
+        grid-area: lname-label;
+      }
+      .lname-inp {
+        grid-area: lname-inp;
+      }
+      .placed-label {
+        grid-area: placed-label;
+      }
+      s.placed-inp {
+        grid-area: placed-inp;
+      }
+      .company-label {
+        grid-area: company-label;
+      }
+      .company-inp {
+        grid-area: company-inp;
+      }
+      .package-label {
+        grid-area: package-label;
+      }
+      .company-inp {
+        grid-area: company-inp;
+      }
+      .companies-applied-label {
+        grid-area: companies-applied-label;
+      }
+      .companies-applied-table {
+        grid-area: companies-applied-table;
+      }
+      .label-element,
+      .inp-element {
+        margin: 10px 5px;
+      }
+      .label-element {
+        background-color: red;
+        width: 300px;
+        text-align: right;
+        padding: 10px;
+      }
+      .inp-element {
+        background-color: green;
+        transform: translateX(-250px);
+        padding: 10px;
+      }
+      h1 {
+        display: inline-block;
+        margin-left: 40%;
+      }
+      input {
+        font-size: 1rem;
+      }
+    </style>
   </head>
   <body>
-    <h1>This is the add new record page</h1>
+    <div class="container">
+      <h1>Add New Student Record</h1>
+      <div class="grid-container">
+        <!-- <div class="blank-left">blank-left</div> -->
+        <div class="roll-label label-element">Roll No</div>
+        <div class="roll-inp inp-element">
+          <input type="text" placeholder="Roll No" />
+        </div>
+        <div class="fname-label label-element">First Name</div>
+        <div class="fname-inp inp-element">
+          <input type="text" placeholder="First Name" />
+        </div>
+        <div class="mname-label label-element">Middle Name</div>
+        <div class="mname-inp inp-element">
+          <input type="text" placeholder="Middle Name" />
+        </div>
+        <div class="lname-label label-element">Last Name</div>
+        <div class="lname-inp inp-element">
+          <input type="text" placeholder="Last Name" />
+        </div>
+        <div class="placed-label label-element">Placed</div>
+        <div class="placed-inp inp-element">
+          <input type="text" placeholder="Placed" />
+        </div>
+        <div class="company-label label-element">Company placed</div>
+        <div class="company-inp inp-element">
+          <input type="text" placeholder="Company" />
+        </div>
+        <div class="package-label label-element">Package in company placed</div>
+        <div class="package-inp inp-element">
+          <input type="text" placeholder="Package" />
+        </div>
+
+        <div class="companies-applied-label">Companies Applied</div>
+        <!-- <div class="blank-right">blank-right</div> -->
+        <div class="companies-applied-table">Companies Applied Table</div>
+      </div>
+    </div>
   </body>
 </html>
